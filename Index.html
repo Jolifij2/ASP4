@@ -1,0 +1,26 @@
+@model List<FiltersApp.Models.Book>
+@{
+    ViewData["Title"] = "Книги";
+}
+<h1>Список книг</h1>
+<table border="1" cellpadding="10">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Название</th>
+            <th>Автор</th>
+            <th>Год</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.Id</td>
+                <td>@book.Title</td>
+                <td>@book.Author</td>
+                <td>@book.Year</td>
+            </tr>
+        }
+    </tbody>
+</table>
